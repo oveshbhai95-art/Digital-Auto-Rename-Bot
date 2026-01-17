@@ -1,18 +1,17 @@
-# Use a more recent and stable base image
-FROM python:3.9-slim-bullseye
+# Python 3.10 use karein kyunki pyrofork 2.3.69 isi par chalta hai
+FROM python:3.10-slim-bullseye
 
-# Update and install ffmpeg in a single step to keep image small
+# Install ffmpeg
 RUN apt-get update -qq && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
 
-# Set the working directory
 WORKDIR /app
 
-# Copy and install requirements first (better for caching)
+# Requirements install karein
 COPY requirements.txt .
+RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application
 COPY . .
 
-# Command to run the bot
 CMD ["python", "bot.py"]
+
