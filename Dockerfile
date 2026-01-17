@@ -1,19 +1,18 @@
-# Use the official Python image
-FROM python:3.9-slim-buster
+# Use a more recent and stable base image
+FROM python:3.9-slim-bullseye
 
-RUN apt-get update -qq && apt-get -y install ffmpeg
+# Update and install ffmpeg in a single step to keep image small
+RUN apt-get update -qq && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
 
-# Set the working directory in the container
+# Set the working directory
 WORKDIR /app
 
-# Copy the dependencies file to the working directory
+# Copy and install requirements first (better for caching)
 COPY requirements.txt .
-
-# Install any needed dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application code to the working directory
+# Copy the rest of the application
 COPY . .
 
-# Command to run the application
+# Command to run the bot
 CMD ["python", "bot.py"]
