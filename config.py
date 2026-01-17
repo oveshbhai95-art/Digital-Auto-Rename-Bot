@@ -34,8 +34,8 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # digital_botz client config
-    API_ID = os.environ.get("API_ID", "")
-    API_HASH = os.environ.get("API_HASH", "")
+    API_ID = os.environ.get("API_ID", "23903140")
+    API_HASH = os.environ.get("API_HASH", "579f1bcf3eac1660d81ef34b09906012")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
     BOT = None
 
@@ -44,12 +44,12 @@ class Config(object):
     
     # database config
     DB_NAME = os.environ.get("DB_NAME","Digital_Auto_Rename_Bot")     
-    DB_URL = os.environ.get("DB_URL","")
+    DB_URL = os.environ.get("DB_URL","mongodb+srv://peyofip118_db_user:OYjWsF84H4ah69Gd@cluster0.scovtfc.mongodb.net/?appName=Cluster0")
  
     # other configs
-    RKN_PIC = os.environ.get("RKN_PIC", "https://telegra.ph/file/b746aadfe59959eb76f59.jpg")
-    ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6705898491').split()]
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002123429361"))
+    RKN_PIC = os.environ.get("RKN_PIC", "https://graph.org/file/a83c0e49256d3ff07efac-1de46757d2f0503452.jpg https://graph.org/file/bbc0e2a8f163fe9c61988-8b2ed734c33bbda329.jpg")
+    ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1416433622').split()]
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1003166629808"))
 
     # free upload limit 
     FREE_UPLOAD_LIMIT = 6442450944 # calculation 6*1024*1024*1024=results
@@ -70,14 +70,23 @@ class Config(object):
 
 class rkn(object):
     # part of text configuration
-    START_TXT = """<b>Ｈ𝙰𝙸, {}👋
+    START_TXT = """<b>ʜᴇʟʟᴏ {}! 👋
 
-𝚃ʜɪs 𝙸s 𝙰ɴ 𝙰ᴅᴠᴀᴄᴇᴅ 𝙰ɴᴅ 𝚈ᴇᴛ 𝙿ᴏᴡᴇʀғᴜʟ 𝚁ᴇɴᴀᴍᴇ 𝙱ᴏᴛ
-𝚄sɪɴɢ 𝚃ʜɪs 𝙱ᴏᴛ 𝚈ᴏᴜ 𝙲ᴀɴ 𝚁ᴇɴᴀᴍᴇ & 𝙲ʜᴀɴɢᴇ 𝚃ʜᴜᴍʙɴᴀɪʟ 𝙾ғ 𝚈ᴏᴜʀ 𝙵ɪʟᴇ 
-𝚈ᴏᴜ 𝙲ᴀɴ 𝙰ʟsᴏ 𝙲ᴏɴᴠᴇʀᴛ 𝚅ɪᴅᴇᴏ 𝚃ᴏ 𝙵ɪʟᴇ & 𝙵ɪʟᴇ 𝚃ᴏ 𝚅ɪᴅᴇᴏ
-𝚃𝙷𝙸𝚂 𝙱𝙾𝚃 𝙰𝙻𝚂𝙾 𝚂𝚄𝙿𝙿𝙾𝚁𝚃𝚂 𝙲𝚄𝚂𝚃𝙾𝙼 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻 𝙰𝙽𝙳 𝙲𝚄𝚂𝚃𝙾𝙼 𝙲𝙰𝙿𝚃𝙸𝙾𝙽
+ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ɴᴇxᴛ ɢᴇɴᴇʀᴀᴛɪᴏɴ ᴏꜰ ꜰɪʟᴇ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ. 🤖
 
-Tʜɪs Bᴏᴛ Wᴀs Cʀᴇᴀᴛᴇᴅ Bʏ : @Digital_Botz 💞</b>"""
+ᴛʜɪs ɪs ᴀɴ ᴀɪ-ᴘᴏᴡᴇʀᴇᴅ ᴀᴅᴠᴀɴᴄᴇᴅ ʀᴇɴᴀᴍᴇ ʙᴏᴛ ᴅᴇsɪɢɴᴇᴅ ᴡɪᴛʜ ᴘʀᴇᴄɪsɪᴏɴ. ⚡
+
+✨ sᴍᴀʀᴛ ꜰᴇᴀᴛᴜʀᴇs:
+• ɪɴᴛᴇʟʟɪɢᴇɴᴛ ꜰɪʟᴇ ʀᴇɴᴀᴍɪɴɢ
+• ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴀssɪsᴛᴀɴᴛ
+• sᴇᴀᴍʟᴇss ᴠɪᴅᴇᴏ ᴛᴏ ᴅᴏᴄᴜᴍᴇɴᴛ sᴡɪᴛᴄʜ
+• ᴀᴜᴛᴏ-ᴍᴇᴛᴀᴅᴀᴛᴀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ
+• ᴘᴇʀsᴏɴᴀʟɪᴢᴇᴅ ᴄᴀᴘᴛɪᴏɴ sᴜᴘᴘᴏʀᴛ
+
+ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴛʜᴇ ꜰᴀsᴛᴇsᴛ ᴘʀᴏᴄᴇssɪɴɢ sᴘᴇᴇᴅ ᴡɪᴛʜ ᴏᴜʀ ᴀɪ ᴄᴏʀᴇ.
+
+ᴍᴀɴᴀɢᴇᴅ ʙʏ : @OveshBossOfficial</b>"""
+
 
     ABOUT_TXT = """<b>╭───────────⍟
 ├🤖 ᴍy ɴᴀᴍᴇ : {}
